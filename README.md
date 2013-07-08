@@ -1,7 +1,7 @@
 SIRC_HW_Xilinx_XUPV5_Hardware_PUF
 =================================
 
-Implementation of SIRC, hardware end code for a Xilinx virtex 5 XUPV5 device. This project is made to work with a actual hardware PUF. PUF - Physically Unclonable Function.
+Implementation of SIRC, hardware end code for a Xilinx virtex 5 XUPV5 device. This project is made to work with an actual hardware PUF. PUF - Physically Unclonable Function.
 
 
 Network configuration
