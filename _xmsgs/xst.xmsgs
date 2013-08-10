@@ -486,6 +486,12 @@
 <msg type="warning" file="Xst" num="1895" delta="old" >Due to other FF/Latch trimming, FF/Latch &lt;<arg fmt="%s" index="1">rd_enable_delay2</arg>&gt; (without init value) has a constant value of <arg fmt="%d" index="2">1</arg> in block &lt;<arg fmt="%s" index="3">tx_client_fifo_8</arg>&gt;. This FF/Latch will be trimmed during the optimization process.
 </msg>
 
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clkDivider_21</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">serialTransmitReceive</arg>&gt;.
+</msg>
+
+<msg type="warning" file="Xst" num="2677" delta="old" >Node &lt;<arg fmt="%s" index="1">clkDivider_22</arg>&gt; of sequential type is unconnected in block &lt;<arg fmt="%s" index="2">serialTransmitReceive</arg>&gt;.
+</msg>
+
 <msg type="info" file="Xst" num="1901" delta="old" >Instance <arg fmt="%s" index="1">ideld0</arg> in unit <arg fmt="%s" index="2">gmii_if</arg> of type <arg fmt="%s" index="3">IDELAY</arg> has been replaced by <arg fmt="%s" index="4">IODELAY</arg>
 </msg>
 
@@ -1342,6 +1348,9 @@
 </msg>
 
 <msg type="info" file="Xst" num="741" delta="old" >HDL ADVISOR - A <arg fmt="%d" index="1">13</arg>-bit shift register was found for signal &lt;<arg fmt="%s" index="2">E2M/delayCtrl0Reset_12</arg>&gt; and currently occupies <arg fmt="%d" index="3">13</arg> logic cells (<arg fmt="%d" index="4">6</arg> slices). Removing the set/reset logic would take advantage of SRL<arg fmt="%d" index="5">32</arg> (and derived) primitives and reduce this to 1 logic cells (1 slices). Evaluate if the set/reset can be removed for this simple shift register. The majority of simple pipeline structures do not need to be set/reset operationally.
+</msg>
+
+<msg type="info" file="Xst" num="2169" delta="old" >HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 </msg>
 
 </messages>

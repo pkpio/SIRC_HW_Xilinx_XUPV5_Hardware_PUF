@@ -6,8 +6,8 @@ Command Line: C:\Xilinx\13.2\ISE_DS\ISE\bin\nt64\unwrapped\ngdbuild.exe
 xc5vlx110t-ff1136-1 system.ngc system.ngd
 
 Reading NGO file "C:/Users/praveen/Xilinx work/Dropbox/Rice Internship
-work/Farinaz - Low power high speed PUFs/PUF testing code/SIRC_HW (Real
-PUF)/system.ngc" ...
+work/Farinaz - Low power high speed PUFs/PUF testing code/SIRC_HW/XUPV5/SIRC_HW
+(Real PUF)/system.ngc" ...
 Loading design module "ipcore_dir/blk_mem_gen_inputMem.ngc"...
 Loading design module "ipcore_dir/blk_mem_gen_outputMem.ngc"...
 Loading design module "ipcore_dir/blk_mem_gen_paramReg.ngc"...
@@ -21,64 +21,64 @@ WARNING:NgdBuild:1012 - The constraint <INST
    /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TX_EN
    IOB = true> is overridden on the design object
    E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TX_EN by the constraint <INST
-   "*gmii0?GMII_TX_EN"     IOB = true;> [XUPV5system.ucf(184)].
+   "*gmii0?GMII_TX_EN"     IOB = true;> [XUPV5system.ucf(188)].
 WARNING:NgdBuild:1012 - The constraint <INST
    /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TX_ER
    IOB = true> is overridden on the design object
    E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TX_ER by the constraint <INST
-   "*gmii0?GMII_TX_ER"     IOB = true;> [XUPV5system.ucf(185)].
+   "*gmii0?GMII_TX_ER"     IOB = true;> [XUPV5system.ucf(189)].
 WARNING:NgdBuild:1012 - The constraint <INST
    /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_0
    IOB = true> is overridden on the design object
    E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_0 by the constraint <INST
-   "*gmii0?GMII_TXD_?"     IOB = true;> [XUPV5system.ucf(183)].
+   "*gmii0?GMII_TXD_?"     IOB = true;> [XUPV5system.ucf(187)].
 WARNING:NgdBuild:1012 - The constraint <INST
    /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_1
    IOB = true> is overridden on the design object
    E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_1 by the constraint <INST
-   "*gmii0?GMII_TXD_?"     IOB = true;> [XUPV5system.ucf(183)].
+   "*gmii0?GMII_TXD_?"     IOB = true;> [XUPV5system.ucf(187)].
 WARNING:NgdBuild:1012 - The constraint <INST
    /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_2
    IOB = true> is overridden on the design object
    E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_2 by the constraint <INST
-   "*gmii0?GMII_TXD_?"     IOB = true;> [XUPV5system.ucf(183)].
+   "*gmii0?GMII_TXD_?"     IOB = true;> [XUPV5system.ucf(187)].
 WARNING:NgdBuild:1012 - The constraint <INST
    /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_3
    IOB = true> is overridden on the design object
    E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_3 by the constraint <INST
-   "*gmii0?GMII_TXD_?"     IOB = true;> [XUPV5system.ucf(183)].
+   "*gmii0?GMII_TXD_?"     IOB = true;> [XUPV5system.ucf(187)].
 WARNING:NgdBuild:1012 - The constraint <INST
    /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_4
    IOB = true> is overridden on the design object
    E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_4 by the constraint <INST
-   "*gmii0?GMII_TXD_?"     IOB = true;> [XUPV5system.ucf(183)].
+   "*gmii0?GMII_TXD_?"     IOB = true;> [XUPV5system.ucf(187)].
 WARNING:NgdBuild:1012 - The constraint <INST
    /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_5
    IOB = true> is overridden on the design object
    E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_5 by the constraint <INST
-   "*gmii0?GMII_TXD_?"     IOB = true;> [XUPV5system.ucf(183)].
+   "*gmii0?GMII_TXD_?"     IOB = true;> [XUPV5system.ucf(187)].
 WARNING:NgdBuild:1012 - The constraint <INST
    /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_6
    IOB = true> is overridden on the design object
    E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_6 by the constraint <INST
-   "*gmii0?GMII_TXD_?"     IOB = true;> [XUPV5system.ucf(183)].
+   "*gmii0?GMII_TXD_?"     IOB = true;> [XUPV5system.ucf(187)].
 WARNING:NgdBuild:1012 - The constraint <INST
    /system/EXPANDED/system/E2M\/emac_ll\/v5_emac_block_inst\/gmii0\/GMII_TXD_7
    IOB = true> is overridden on the design object
    E2M/emac_ll/v5_emac_block_inst/gmii0/GMII_TXD_7 by the constraint <INST
-   "*gmii0?GMII_TXD_?"     IOB = true;> [XUPV5system.ucf(183)].
+   "*gmii0?GMII_TXD_?"     IOB = true;> [XUPV5system.ucf(187)].
 WARNING:NgdBuild:1345 - The constraint <TIMESPEC "TS_userRunClearToggle" = FROM
    "userRunClearTogUS" TO "userRunClearTogCS" 8000 ps DATAPATHONLY;>
-   [XUPV5system.ucf(243)] is overridden by the constraint <TIMESPEC
+   [XUPV5system.ucf(247)] is overridden by the constraint <TIMESPEC
    "TS_userRunClearToggle" = FROM "userRunSetTogCS" TO "userRunSetTogUS" 8000 ps
-   DATAPATHONLY;> [XUPV5system.ucf(246)]. The overriden constraint usually comes
+   DATAPATHONLY;> [XUPV5system.ucf(250)]. The overriden constraint usually comes
    from the input netlist or ncf files. Please set
    XIL_NGDBUILD_CONSTR_OVERRIDE_ERROR to promote this message to an error.
 WARNING:NgdBuild:1345 - The constraint <TIMESPEC "TS_userRunClearToggle" = FROM
    "userRunSetTogCS" TO "userRunSetTogUS" 8000 ps DATAPATHONLY;>
-   [XUPV5system.ucf(246)] is overridden by the constraint <TIMESPEC
+   [XUPV5system.ucf(250)] is overridden by the constraint <TIMESPEC
    "TS_userRunClearToggle" = FROM "userRunSetTogCS" TO "userRunSetTogUS" 8000 ps
-   DATAPATHONLY;> [XUPV5system.ucf(250)]. The overriden constraint usually comes
+   DATAPATHONLY;> [XUPV5system.ucf(254)]. The overriden constraint usually comes
    from the input netlist or ncf files. Please set
    XIL_NGDBUILD_CONSTR_OVERRIDE_ERROR to promote this message to an error.
 Done...
@@ -96,7 +96,7 @@ NGDBUILD Design Results Summary:
   Number of errors:     0
   Number of warnings:  12
 
-Total memory usage is 177316 kilobytes
+Total memory usage is 174804 kilobytes
 
 Writing NGD file "system.ngd" ...
 Total REAL time to NGDBUILD completion:  6 sec

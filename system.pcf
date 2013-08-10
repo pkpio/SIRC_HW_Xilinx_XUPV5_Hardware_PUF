@@ -1,5 +1,5 @@
 //! **************************************************************************
-// Written by: Map O.61xd on Thu Jun 06 19:09:16 2013
+// Written by: Map O.61xd on Fri Jul 12 14:19:31 2013
 //! **************************************************************************
 
 SCHEMATIC START;
@@ -15,7 +15,7 @@ COMP "CB_SI" LOCATE = SITE "M32" LEVEL 1;
 COMP "CAout" LOCATE = SITE "J32" LEVEL 1;
 COMP "CBout" LOCATE = SITE "J34" LEVEL 1;
 COMP "RESET" LOCATE = SITE "E9" LEVEL 1;
-COMP "SO_Up" LOCATE = SITE "L18" LEVEL 1;
+COMP "SO_Up" LOCATE = SITE "G33" LEVEL 1;
 COMP "Ph_En" LOCATE = SITE "N34" LEVEL 1;
 COMP "OutEn" LOCATE = SITE "P34" LEVEL 1;
 COMP "GMII_RX_ER_0" LOCATE = SITE "E33" LEVEL 1;
@@ -23,6 +23,8 @@ COMP "GMII_RX_DV_0" LOCATE = SITE "E32" LEVEL 1;
 COMP "GMII_TX_EN_0" LOCATE = SITE "AJ10" LEVEL 1;
 COMP "GMII_TX_ER_0" LOCATE = SITE "AJ9" LEVEL 1;
 COMP "sysACE_CLK" LOCATE = SITE "AH17" LEVEL 1;
+COMP "test1" LOCATE = SITE "AH34" LEVEL 1;
+COMP "test2" LOCATE = SITE "AJ6" LEVEL 1;
 COMP "SO_not_Up" LOCATE = SITE "H34" LEVEL 1;
 COMP "sysACE_MPADD<0>" LOCATE = SITE "G5" LEVEL 1;
 COMP "sysACE_MPADD<1>" LOCATE = SITE "N7" LEVEL 1;
@@ -37,7 +39,7 @@ COMP "LED<2>" LOCATE = SITE "AD25" LEVEL 1;
 COMP "LED<3>" LOCATE = SITE "G16" LEVEL 1;
 COMP "LED<4>" LOCATE = SITE "AD26" LEVEL 1;
 COMP "LED<5>" LOCATE = SITE "G15" LEVEL 1;
-COMP "LED<6>" LOCATE = SITE "G33" LEVEL 1;
+COMP "LED<6>" LOCATE = SITE "L18" LEVEL 1;
 COMP "LED<7>" LOCATE = SITE "H18" LEVEL 1;
 COMP "SO_not_Up_In" LOCATE = SITE "AD32" LEVEL 1;
 COMP "GMII_RXD_0<0>" LOCATE = SITE "A33" LEVEL 1;
@@ -431,8 +433,18 @@ PIN
         = BEL
         "E2M/EC/register32File/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/v5_noinit.ram/TRUE_DP.SINGLE_PRIM36.TDP"
         PINNAME CLKBU;
-TIMEGRP clk_user_interface = BEL "tm/str/clkCount_1" BEL "tm/length_16" BEL
-        "tm/length_15" BEL "tm/length_14" BEL "tm/length_13" BEL
+TIMEGRP clk_user_interface = BEL "tm/str/clkDivider_0" BEL
+        "tm/str/clkDivider_1" BEL "tm/str/clkDivider_2" BEL
+        "tm/str/clkDivider_3" BEL "tm/str/clkDivider_4" BEL
+        "tm/str/clkDivider_5" BEL "tm/str/clkDivider_6" BEL
+        "tm/str/clkDivider_7" BEL "tm/str/clkDivider_8" BEL
+        "tm/str/clkDivider_9" BEL "tm/str/clkDivider_10" BEL
+        "tm/str/clkDivider_11" BEL "tm/str/clkDivider_12" BEL
+        "tm/str/clkDivider_13" BEL "tm/str/clkDivider_14" BEL
+        "tm/str/clkDivider_15" BEL "tm/str/clkDivider_16" BEL
+        "tm/str/clkDivider_17" BEL "tm/str/clkDivider_18" BEL
+        "tm/str/clkDivider_19" BEL "tm/str/clkDivider_20" BEL "tm/length_16"
+        BEL "tm/length_15" BEL "tm/length_14" BEL "tm/length_13" BEL
         "tm/length_12" BEL "tm/length_11" BEL "tm/length_10" BEL "tm/length_9"
         BEL "tm/length_8" BEL "tm/length_7" BEL "tm/length_6" BEL
         "tm/length_5" BEL "tm/length_4" BEL "tm/length_3" BEL "tm/length_2"
@@ -591,8 +603,7 @@ TIMEGRP clk_user_interface = BEL "tm/str/clkCount_1" BEL "tm/length_16" BEL
         "E2M/EC/tx_max_output_address_9" BEL "E2M/EC/tx_max_output_address_10"
         BEL "E2M/EC/tx_max_output_address_11" BEL
         "E2M/EC/tx_max_output_address_12" BEL "E2M/EC/userRunRegisterUserSide"
-        BEL "tm/str/PH2Reg" BEL "tm/str/PH1Reg" BEL "tm/str/clkCount_0" BEL
-        "tm/currState_0" BEL
+        BEL "tm/currState_0" BEL
         "E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/sel_pipe_2"
         BEL
         "E2M/EC/memInputData/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/has_mux_b.B/dout_i_0"

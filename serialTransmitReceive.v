@@ -93,6 +93,8 @@ module serialTransmitReceive(
 	reg	CAoutReg;
 	reg	CBoutReg;
 	
+	//Clock divider
+	reg [22:0] clkDivider = 0;
 	
 	initial begin
 		currBit <= 0;
@@ -103,8 +105,14 @@ module serialTransmitReceive(
 		currState <= IDLE;
 	end
 	
-	//Generating the two delayed clocks
+	//Clock division
 	always @(posedge clk) begin
+		clkDivider <= clkDivider+1;
+	end
+	
+	
+	//Generating the two delayed clocks
+	always @(posedge clkDivider[20]) begin
 		//Generating phase delayed clocks PH1 and PH2 from Clk
 		clkCount <= clkCount+1;
 		case(clkCount)

@@ -675,11 +675,11 @@ of frag <arg fmt="%s" index="2">REGCLKBL</arg> connected to power/ground net <ar
 	 Comp: LED&lt;0&gt;   IOSTANDARD = LVDCI_18
 	 Comp: LED&lt;1&gt;   IOSTANDARD = LVDCI_18
 	 Comp: LED&lt;2&gt;   IOSTANDARD = LVDCI_18
-	 Comp: LED&lt;3&gt;   IOSTANDARD = LVCMOS25
+	 Comp: LED&lt;3&gt;   IOSTANDARD = LVCMOS12
 	 Comp: LED&lt;4&gt;   IOSTANDARD = LVDCI_18
-	 Comp: LED&lt;5&gt;   IOSTANDARD = LVCMOS25
-	 Comp: LED&lt;6&gt;   IOSTANDARD = LVCMOS25
-	 Comp: LED&lt;7&gt;   IOSTANDARD = LVCMOS25
+	 Comp: LED&lt;5&gt;   IOSTANDARD = LVCMOS12
+	 Comp: LED&lt;6&gt;   IOSTANDARD = LVCMOS12
+	 Comp: LED&lt;7&gt;   IOSTANDARD = LVCMOS12
 
 </arg>
 </msg>

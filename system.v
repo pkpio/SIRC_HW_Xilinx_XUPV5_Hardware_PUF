@@ -99,8 +99,24 @@ module system #(
 	output		wire	SO_not_Up_In,		//Input of upper scan chain for Serial out not
 	output		wire	SO_Up_In,			//Input of upper scan chain for Serial out
 	output		wire	SO_not_Down_In,		//Input of lower scan chain for Serial out not
-	output		wire	SO_Down_In			//Input of lower scan chain for Serial out
+	output		wire	SO_Down_In,			//Input of lower scan chain for Serial out
+		
+	//Few test NETs
+	output	wire	test1, //Pin attached to below switch
+	input		wire	test2 //Center dip switch
 );
+
+
+	//Start of Praveen Testing code
+	reg test2Reg;
+	always @(posedge CLK_100) begin
+		test2Reg <= test2;
+	end
+	assign test1 = test2Reg;
+	//End of Praveen testing code
+
+
+
 	//************Handle global asynchronous reset from physical switch on board
 	// Buffer active low reset signal from board.
 	wire hard_reset_low;

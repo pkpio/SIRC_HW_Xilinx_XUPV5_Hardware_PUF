@@ -4,13 +4,13 @@ Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Parameter xsthdpdir set to xst
 
 
 Total REAL time to Xst completion: 0.00 secs
-Total CPU time to Xst completion: 0.06 secs
+Total CPU time to Xst completion: 0.07 secs
  
 --> Reading design: system.prj
 
@@ -1199,10 +1199,11 @@ WARNING:Xst:646 - Signal <CBoutReg> is assigned but never used. This unconnected
 WARNING:Xst:646 - Signal <CAoutReg> is assigned but never used. This unconnected signal will be trimmed during the optimization process.
     Found 4x2-bit ROM for signal <clkCount$rom0000>.
     Found 2-bit up counter for signal <clkCount>.
+    Found 23-bit up counter for signal <clkDivider>.
     Found 8-bit register for signal <currBit>.
     Found 8-bit adder for signal <currBit$addsub0000>.
-    Found 8-bit comparator lessequal for signal <currBit$cmp_le0000> created at line 148.
-    Found 4-bit comparator lessequal for signal <currBit$cmp_le0001> created at line 160.
+    Found 8-bit comparator lessequal for signal <currBit$cmp_le0000> created at line 156.
+    Found 4-bit comparator lessequal for signal <currBit$cmp_le0001> created at line 168.
     Found 2-bit register for signal <currState>.
     Found 1-bit register for signal <ExDoneReg>.
     Found 1-bit register for signal <PH1Reg>.
@@ -1211,13 +1212,13 @@ WARNING:Xst:646 - Signal <CAoutReg> is assigned but never used. This unconnected
     Found 128-bit register for signal <responseDownReg>.
     Found 128-bit register for signal <responseUpNotReg>.
     Found 128-bit register for signal <responseUpReg>.
-    Found 8-bit comparator greater for signal <responseUpReg_127$cmp_gt0000> created at line 182.
+    Found 8-bit comparator greater for signal <responseUpReg_127$cmp_gt0000> created at line 190.
     Found 1-bit register for signal <TrigReg>.
     Found 4-bit register for signal <waitBeforeTrigCount>.
-    Found 4-bit adder for signal <waitBeforeTrigCount$addsub0000> created at line 162.
+    Found 4-bit adder for signal <waitBeforeTrigCount$addsub0000> created at line 170.
     Summary:
 	inferred   1 ROM(s).
-	inferred   1 Counter(s).
+	inferred   2 Counter(s).
 	inferred 530 D-type flip-flop(s).
 	inferred   2 Adder/Subtractor(s).
 	inferred   3 Comparator(s).
@@ -1649,6 +1650,9 @@ Unit <ethernet2BlockMem> synthesized.
 
 Synthesizing Unit <system>.
     Related source file is "system.v".
+    Found 1-bit register for signal <test2Reg>.
+    Summary:
+	inferred   1 D-type flip-flop(s).
 Unit <system> synthesized.
 
 INFO:Xst:1767 - HDL ADVISOR - Resource sharing has identified that some arithmetic operations in this design can share the same physical resources for reduced device utilization. For improved clock frequency you may try to disable resource sharing.
@@ -1680,16 +1684,17 @@ Macro Statistics
  7-bit subtractor                                      : 1
  8-bit adder                                           : 2
  9-bit adder                                           : 1
-# Counters                                             : 7
+# Counters                                             : 8
  10-bit up counter                                     : 1
  12-bit up counter                                     : 2
  2-bit up counter                                      : 1
+ 23-bit up counter                                     : 1
  4-bit up counter                                      : 1
  9-bit updown counter                                  : 2
 # Accumulators                                         : 1
  12-bit updown accumulator                             : 1
-# Registers                                            : 840
- 1-bit register                                        : 733
+# Registers                                            : 841
+ 1-bit register                                        : 734
  12-bit register                                       : 12
  13-bit register                                       : 4
  16-bit register                                       : 5
@@ -1869,16 +1874,17 @@ Macro Statistics
  6-bit adder                                           : 1
  8-bit adder                                           : 2
  9-bit adder                                           : 1
-# Counters                                             : 7
+# Counters                                             : 8
  10-bit up counter                                     : 1
  12-bit up counter                                     : 2
  2-bit up counter                                      : 1
+ 23-bit up counter                                     : 1
  4-bit up counter                                      : 1
  9-bit updown counter                                  : 2
 # Accumulators                                         : 1
  12-bit updown accumulator                             : 1
-# Registers                                            : 2009
- Flip-Flops                                            : 2009
+# Registers                                            : 2010
+ Flip-Flops                                            : 2010
 # Comparators                                          : 24
  13-bit comparator equal                               : 1
  13-bit comparator greater                             : 2
@@ -1908,6 +1914,8 @@ Macro Statistics
 =========================================================================
 WARNING:Xst:1710 - FF/Latch <rd_enable_delay> (without init value) has a constant value of 1 in block <tx_client_fifo_8>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <rd_enable_delay2> (without init value) has a constant value of 1 in block <tx_client_fifo_8>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:2677 - Node <clkDivider_21> of sequential type is unconnected in block <serialTransmitReceive>.
+WARNING:Xst:2677 - Node <clkDivider_22> of sequential type is unconnected in block <serialTransmitReceive>.
 INFO:Xst:1901 - Instance ideld0 in unit gmii_if of type IDELAY has been replaced by IODELAY
 INFO:Xst:1901 - Instance ideld1 in unit gmii_if of type IDELAY has been replaced by IODELAY
 INFO:Xst:1901 - Instance ideld2 in unit gmii_if of type IDELAY has been replaced by IODELAY
@@ -2241,8 +2249,8 @@ Unit <system> processed.
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 1805
- Flip-Flops                                            : 1805
+# Registers                                            : 1827
+ Flip-Flops                                            : 1827
 # Shift Registers                                      : 11
  2-bit shift register                                  : 3
  3-bit shift register                                  : 8
@@ -2271,24 +2279,24 @@ Optimization Goal                  : Speed
 Keep Hierarchy                     : No
 
 Design Statistics
-# IOs                              : 77
+# IOs                              : 79
 
 Cell Usage :
-# BELS                             : 3691
+# BELS                             : 3753
 #      GND                         : 4
-#      INV                         : 168
-#      LUT1                        : 141
+#      INV                         : 169
+#      LUT1                        : 161
 #      LUT2                        : 96
 #      LUT3                        : 173
 #      LUT4                        : 414
 #      LUT5                        : 584
 #      LUT6                        : 1216
-#      MUXCY                       : 433
+#      MUXCY                       : 453
 #      MUXF7                       : 68
 #      VCC                         : 4
-#      XORCY                       : 390
-# FlipFlops/Latches                : 1826
-#      FD                          : 58
+#      XORCY                       : 411
+# FlipFlops/Latches                : 1848
+#      FD                          : 80
 #      FDC                         : 31
 #      FDCE                        : 13
 #      FDE                         : 1293
@@ -2304,12 +2312,13 @@ Cell Usage :
 #      RAMB36_EXP                  : 35
 # Shift Registers                  : 11
 #      SRLC16E                     : 11
-# Clock Buffers                    : 6
+# Clock Buffers                    : 7
 #      BUFG                        : 6
-# IO Buffers                       : 73
+#      BUFGP                       : 1
+# IO Buffers                       : 74
 #      IBUF                        : 16
 #      IOBUF                       : 16
-#      OBUF                        : 41
+#      OBUF                        : 42
 # Others                           : 17
 #      FIFO18_36                   : 2
 #      IDELAYCTRL                  : 1
@@ -2325,29 +2334,29 @@ Selected Device : 5vlx110tff1136-1
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:            1816  out of  69120     2%  
- Number of Slice LUTs:                 2803  out of  69120     4%  
-    Number used as Logic:              2792  out of  69120     4%  
+ Number of Slice Registers:            1837  out of  69120     2%  
+ Number of Slice LUTs:                 2824  out of  69120     4%  
+    Number used as Logic:              2813  out of  69120     4%  
     Number used as Memory:               11  out of  17920     0%  
        Number used as SRL:               11
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:   3636
-   Number with an unused Flip Flop:    1820  out of   3636    50%  
-   Number with an unused LUT:           833  out of   3636    22%  
-   Number of fully used LUT-FF pairs:   983  out of   3636    27%  
-   Number of unique control sets:       251
+ Number of LUT Flip Flop pairs used:   3657
+   Number with an unused Flip Flop:    1820  out of   3657    49%  
+   Number with an unused LUT:           833  out of   3657    22%  
+   Number of fully used LUT-FF pairs:  1004  out of   3657    27%  
+   Number of unique control sets:       253
 
 IO Utilization: 
- Number of IOs:                          77
- Number of bonded IOBs:                  73  out of    640    11%  
-    IOB Flip Flops/Latches:              10
+ Number of IOs:                          79
+ Number of bonded IOBs:                  75  out of    640    11%  
+    IOB Flip Flops/Latches:              11
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:               39  out of    148    26%  
     Number using Block RAM only:         37
     Number using FIFO only:               2
- Number of BUFG/BUFGCTRLs:                6  out of     32    18%  
+ Number of BUFG/BUFGCTRLs:                7  out of     32    21%  
  Number of PLL_ADVs:                      2  out of      6    33%  
 
 ---------------------------
@@ -2371,13 +2380,16 @@ Clock Information:
 -----------------------------------+------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)  | Load  |
 -----------------------------------+------------------------+-------+
+CLK_100                            | BUFGP                  | 1     |
 tm/str/PH1Reg1                     | BUFG                   | 272   |
-clk_user_interface_i               | BUFG                   | 425   |
+clk_user_interface_i               | BUFG                   | 442   |
+tm/str/clkDivider_20               | NONE(tm/str/clkCount_1)| 4     |
 clk_125_eth_i                      | BUFG                   | 1057  |
 GMII_RX_CLK_0                      | IBUF+IODELAY+BUFG      | 116   |
 E2M/EC/sysACE_delay_clk            | BUFG                   | 34    |
 clk_200_i                          | BUFG                   | 13    |
 -----------------------------------+------------------------+-------+
+INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
 
 Asynchronous Control Signals Information:
 ----------------------------------------
@@ -2495,7 +2507,7 @@ Delay:               3.473ns (Levels of Logic = 2)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_user_interface_i'
   Clock period: 5.023ns (frequency: 199.084MHz)
-  Total number of paths / destination ports: 14577 / 1932
+  Total number of paths / destination ports: 14801 / 1947
 -------------------------------------------------------------------------
 Delay:               5.023ns (Levels of Logic = 10)
   Source:            tm/length_2 (FF)
@@ -2522,6 +2534,27 @@ Delay:               5.023ns (Levels of Logic = 10)
     ----------------------------------------
     Total                      5.023ns (1.805ns logic, 3.218ns route)
                                        (35.9% logic, 64.1% route)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'tm/str/clkDivider_20'
+  Clock period: 1.396ns (frequency: 716.332MHz)
+  Total number of paths / destination ports: 7 / 6
+-------------------------------------------------------------------------
+Delay:               1.396ns (Levels of Logic = 0)
+  Source:            tm/str/clkCount_0 (FF)
+  Destination:       tm/str/PH1Reg (FF)
+  Source Clock:      tm/str/clkDivider_20 rising
+  Destination Clock: tm/str/clkDivider_20 rising
+
+  Data Path: tm/str/clkCount_0 to tm/str/PH1Reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              4   0.471   0.352  tm/str/clkCount_0 (tm/str/clkCount_0)
+     FDR:R                     0.573          tm/str/PH1Reg
+    ----------------------------------------
+    Total                      1.396ns (1.044ns logic, 0.352ns route)
+                                       (74.8% logic, 25.2% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk_125_eth_i'
@@ -2657,6 +2690,25 @@ Delay:               0.807ns (Levels of Logic = 0)
     ----------------------------------------
     Total                      0.807ns (0.471ns logic, 0.336ns route)
                                        (58.4% logic, 41.6% route)
+
+=========================================================================
+Timing constraint: Default OFFSET IN BEFORE for Clock 'CLK_100'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              1.154ns (Levels of Logic = 1)
+  Source:            test2 (PAD)
+  Destination:       test2Reg (FF)
+  Destination Clock: CLK_100 rising
+
+  Data Path: test2 to test2Reg
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     IBUF:I->O             1   0.818   0.336  test2_IBUF (test2_IBUF)
+     FD:D                     -0.018          test2Reg
+    ----------------------------------------
+    Total                      1.154ns (0.818ns logic, 0.336ns route)
+                                       (70.9% logic, 29.1% route)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'tm/str/PH1Reg1'
@@ -2801,8 +2853,27 @@ Offset:              6.946ns (Levels of Logic = 5)
                                        (49.8% logic, 50.2% route)
 
 =========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'tm/str/clkDivider_20'
+  Total number of paths / destination ports: 2 / 2
+-------------------------------------------------------------------------
+Offset:              3.259ns (Levels of Logic = 1)
+  Source:            tm/str/PH1Reg (FF)
+  Destination:       PH1 (PAD)
+  Source Clock:      tm/str/clkDivider_20 rising
+
+  Data Path: tm/str/PH1Reg to PH1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDR:C->Q              1   0.471   0.336  tm/str/PH1Reg (tm/str/PH1Reg1)
+     OBUF:I->O                 2.452          PH1_OBUF (PH1)
+    ----------------------------------------
+    Total                      3.259ns (2.923ns logic, 0.336ns route)
+                                       (89.7% logic, 10.3% route)
+
+=========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk_user_interface_i'
-  Total number of paths / destination ports: 259 / 5
+  Total number of paths / destination ports: 257 / 3
 -------------------------------------------------------------------------
 Offset:              6.714ns (Levels of Logic = 5)
   Source:            tm/challengeB_13_2 (FF)
@@ -2822,6 +2893,25 @@ Offset:              6.714ns (Levels of Logic = 5)
     ----------------------------------------
     Total                      6.714ns (3.459ns logic, 3.255ns route)
                                        (51.5% logic, 48.5% route)
+
+=========================================================================
+Timing constraint: Default OFFSET OUT AFTER for Clock 'CLK_100'
+  Total number of paths / destination ports: 1 / 1
+-------------------------------------------------------------------------
+Offset:              3.259ns (Levels of Logic = 1)
+  Source:            test2Reg (FF)
+  Destination:       test1 (PAD)
+  Source Clock:      CLK_100 rising
+
+  Data Path: test2Reg to test1
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FD:C->Q               1   0.471   0.336  test2Reg (test2Reg)
+     OBUF:I->O                 2.452          test1_OBUF (test1)
+    ----------------------------------------
+    Total                      3.259ns (2.923ns logic, 0.336ns route)
+                                       (89.7% logic, 10.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'GMII_RX_CLK_0'
@@ -2883,13 +2973,13 @@ Delay:               3.617ns (Levels of Logic = 2)
 
 
 Total REAL time to Xst completion: 74.00 secs
-Total CPU time to Xst completion: 74.38 secs
+Total CPU time to Xst completion: 74.10 secs
  
 --> 
 
-Total memory usage is 496552 kilobytes
+Total memory usage is 492440 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  402 (   0 filtered)
-Number of infos    :   42 (   0 filtered)
+Number of warnings :  404 (   0 filtered)
+Number of infos    :   43 (   0 filtered)
 

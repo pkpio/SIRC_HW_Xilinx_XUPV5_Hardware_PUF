@@ -10,37 +10,37 @@ Target Device  : xc5vlx110t
 Target Package : ff1136
 Target Speed   : -1
 Mapper Version : virtex5 -- $Revision: 1.55 $
-Mapped Date    : Thu Jun 06 19:08:09 2013
+Mapped Date    : Fri Jul 12 14:18:26 2013
 
 Design Summary
 --------------
 Number of errors:      0
 Number of warnings:  163
 Slice Logic Utilization:
-  Number of Slice Registers:                 1,805 out of  69,120    2%
-    Number used as Flip Flops:               1,805
-  Number of Slice LUTs:                      2,787 out of  69,120    4%
-    Number used as logic:                    2,767 out of  69,120    4%
+  Number of Slice Registers:                 1,826 out of  69,120    2%
+    Number used as Flip Flops:               1,826
+  Number of Slice LUTs:                      2,808 out of  69,120    4%
+    Number used as logic:                    2,787 out of  69,120    4%
       Number using O6 output only:           2,416
-      Number using O5 output only:             133
-      Number using O5 and O6:                  218
+      Number using O5 output only:             152
+      Number using O5 and O6:                  219
     Number used as Memory:                      11 out of  17,920    1%
       Number used as Shift Register:            11
         Number using O6 output only:            11
-    Number used as exclusive route-thru:         9
-  Number of route-thrus:                       145
-    Number using O6 output only:               142
+    Number used as exclusive route-thru:        10
+  Number of route-thrus:                       165
+    Number using O6 output only:               162
     Number using O5 output only:                 3
 
 Slice Logic Distribution:
-  Number of occupied Slices:                 1,507 out of  17,280    8%
-  Number of LUT Flip Flop pairs used:        3,601
-    Number with an unused Flip Flop:         1,796 out of   3,601   49%
-    Number with an unused LUT:                 814 out of   3,601   22%
-    Number of fully used LUT-FF pairs:         991 out of   3,601   27%
-    Number of unique control sets:             248
+  Number of occupied Slices:                 1,441 out of  17,280    8%
+  Number of LUT Flip Flop pairs used:        3,580
+    Number with an unused Flip Flop:         1,754 out of   3,580   48%
+    Number with an unused LUT:                 772 out of   3,580   21%
+    Number of fully used LUT-FF pairs:       1,054 out of   3,580   29%
+    Number of unique control sets:             249
     Number of slice register sites lost
-      to control set restrictions:             444 out of  69,120    1%
+      to control set restrictions:             447 out of  69,120    1%
 
   A LUT Flip Flop pair for this architecture represents one LUT paired with
   one Flip Flop within a slice.  A control set is a unique combination of
@@ -51,9 +51,9 @@ Slice Logic Distribution:
   over-mapped for a non-BRAM resource or if placement fails.
 
 IO Utilization:
-  Number of bonded IOBs:                        77 out of     640   12%
-    Number of LOCed IOBs:                       77 out of      77  100%
-    IOB Flip Flops:                             21
+  Number of bonded IOBs:                        79 out of     640   12%
+    Number of LOCed IOBs:                       79 out of      79  100%
+    IOB Flip Flops:                             22
 
 Specific Feature Utilization:
   Number of BlockRAM/FIFO:                      40 out of     148   27%
@@ -64,17 +64,17 @@ Specific Feature Utilization:
       Number of 18k BlockRAM used:               4
       Number of 18k FIFO used:                   2
     Total Memory used (KB):                  1,368 out of   5,328   25%
-  Number of BUFG/BUFGCTRLs:                      6 out of      32   18%
-    Number used as BUFGs:                        6
+  Number of BUFG/BUFGCTRLs:                      7 out of      32   21%
+    Number used as BUFGs:                        7
   Number of IDELAYCTRLs:                         2 out of      22    9%
   Number of PLL_ADVs:                            2 out of       6   33%
   Number of TEMACs:                              1 out of       2   50%
 
-Average Fanout of Non-Clock Nets:                4.70
+Average Fanout of Non-Clock Nets:                4.68
 
-Peak Memory Usage:  670 MB
-Total REAL time to MAP completion:  1 mins 8 secs 
-Total CPU time to MAP completion:   1 mins 8 secs 
+Peak Memory Usage:  667 MB
+Total REAL time to MAP completion:  1 mins 6 secs 
+Total CPU time to MAP completion:   1 mins 5 secs 
 
 Table of Contents
 -----------------
@@ -1152,11 +1152,11 @@ WARNING:Place:838 - An IO Bus with more than one IO standard is found.
    	 Comp: LED<0>   IOSTANDARD = LVDCI_18
    	 Comp: LED<1>   IOSTANDARD = LVDCI_18
    	 Comp: LED<2>   IOSTANDARD = LVDCI_18
-   	 Comp: LED<3>   IOSTANDARD = LVCMOS25
+   	 Comp: LED<3>   IOSTANDARD = LVCMOS12
    	 Comp: LED<4>   IOSTANDARD = LVDCI_18
-   	 Comp: LED<5>   IOSTANDARD = LVCMOS25
-   	 Comp: LED<6>   IOSTANDARD = LVCMOS25
-   	 Comp: LED<7>   IOSTANDARD = LVCMOS25
+   	 Comp: LED<5>   IOSTANDARD = LVCMOS12
+   	 Comp: LED<6>   IOSTANDARD = LVCMOS12
+   	 Comp: LED<7>   IOSTANDARD = LVCMOS12
 
 
 WARNING:PhysDesignRules:367 - The signal <CAout_IBUF> is incomplete. The signal
@@ -1280,24 +1280,24 @@ Section 6 - IOB Properties
 | IOB Name                           | Type             | Direction | IO Standard          | Diff  | Drive    | Slew | Reg (s)      | Resistor | IOB      |
 |                                    |                  |           |                      | Term  | Strength | Rate |              |          | Delay    |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
-| CA_SI                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| CAout                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| CB_SI                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| CBout                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
+| CA_SI                              | IOB              | OUTPUT    | LVCMOS12             |       | 8        | SLOW |              |          |          |
+| CAout                              | IOB              | INPUT     | LVCMOS12             |       |          |      |              |          |          |
+| CB_SI                              | IOB              | OUTPUT    | LVCMOS12             |       | 8        | SLOW |              |          |          |
+| CBout                              | IOB              | INPUT     | LVCMOS12             |       |          |      |              |          |          |
 | CLK_100                            | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
-| GMII_GTX_CLK_0                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW | ODDR         |          |          |
-| GMII_RESET_B                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| GMII_RXD_0<0>                      | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
-| GMII_RXD_0<1>                      | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
-| GMII_RXD_0<2>                      | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
-| GMII_RXD_0<3>                      | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
-| GMII_RXD_0<4>                      | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
-| GMII_RXD_0<5>                      | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
-| GMII_RXD_0<6>                      | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
-| GMII_RXD_0<7>                      | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
-| GMII_RX_CLK_0                      | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          | FIXED    |
-| GMII_RX_DV_0                       | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
-| GMII_RX_ER_0                       | IOB              | INPUT     | LVCMOS25             |       |          |      | IFF          |          | FIXED    |
+| GMII_GTX_CLK_0                     | IOB              | OUTPUT    | LVCMOS12             |       | 8        | SLOW | ODDR         |          |          |
+| GMII_RESET_B                       | IOB              | OUTPUT    | LVCMOS12             |       | 8        | SLOW |              |          |          |
+| GMII_RXD_0<0>                      | IOB              | INPUT     | LVCMOS12             |       |          |      | IFF          |          | FIXED    |
+| GMII_RXD_0<1>                      | IOB              | INPUT     | LVCMOS12             |       |          |      | IFF          |          | FIXED    |
+| GMII_RXD_0<2>                      | IOB              | INPUT     | LVCMOS12             |       |          |      | IFF          |          | FIXED    |
+| GMII_RXD_0<3>                      | IOB              | INPUT     | LVCMOS12             |       |          |      | IFF          |          | FIXED    |
+| GMII_RXD_0<4>                      | IOB              | INPUT     | LVCMOS12             |       |          |      | IFF          |          | FIXED    |
+| GMII_RXD_0<5>                      | IOB              | INPUT     | LVCMOS12             |       |          |      | IFF          |          | FIXED    |
+| GMII_RXD_0<6>                      | IOB              | INPUT     | LVCMOS12             |       |          |      | IFF          |          | FIXED    |
+| GMII_RXD_0<7>                      | IOB              | INPUT     | LVCMOS12             |       |          |      | IFF          |          | FIXED    |
+| GMII_RX_CLK_0                      | IOB              | INPUT     | LVCMOS12             |       |          |      |              |          | FIXED    |
+| GMII_RX_DV_0                       | IOB              | INPUT     | LVCMOS12             |       |          |      | IFF          |          | FIXED    |
+| GMII_RX_ER_0                       | IOB              | INPUT     | LVCMOS12             |       |          |      | IFF          |          | FIXED    |
 | GMII_TXD_0<0>                      | IOB              | OUTPUT    | LVDCI_33             |       |          |      | OFF          |          |          |
 | GMII_TXD_0<1>                      | IOB              | OUTPUT    | LVDCI_33             |       |          |      | OFF          |          |          |
 | GMII_TXD_0<2>                      | IOB              | OUTPUT    | LVDCI_33             |       |          |      | OFF          |          |          |
@@ -1311,25 +1311,25 @@ Section 6 - IOB Properties
 | LED<0>                             | IOB              | OUTPUT    | LVDCI_18             |       |          |      |              |          |          |
 | LED<1>                             | IOB              | OUTPUT    | LVDCI_18             |       |          |      |              |          |          |
 | LED<2>                             | IOB              | OUTPUT    | LVDCI_18             |       |          |      |              |          |          |
-| LED<3>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| LED<3>                             | IOB              | OUTPUT    | LVCMOS12             |       | 8        | SLOW |              |          |          |
 | LED<4>                             | IOB              | OUTPUT    | LVDCI_18             |       |          |      |              |          |          |
-| LED<5>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| LED<6>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| LED<7>                             | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| OutEn                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| PH1                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| PH2                                | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| Ph_En                              | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| LED<5>                             | IOB              | OUTPUT    | LVCMOS12             |       | 8        | SLOW |              |          |          |
+| LED<6>                             | IOB              | OUTPUT    | LVCMOS12             |       | 8        | SLOW |              |          |          |
+| LED<7>                             | IOB              | OUTPUT    | LVCMOS12             |       | 8        | SLOW |              |          |          |
+| OutEn                              | IOB              | OUTPUT    | LVCMOS12             |       | 8        | SLOW |              |          |          |
+| PH1                                | IOB              | OUTPUT    | LVCMOS12             |       | 8        | SLOW |              |          |          |
+| PH2                                | IOB              | OUTPUT    | LVCMOS12             |       | 8        | SLOW |              |          |          |
+| Ph_En                              | IOB              | OUTPUT    | LVCMOS12             |       | 8        | SLOW |              |          |          |
 | RESET                              | IOB              | INPUT     | LVDCI_33             |       |          |      |              |          |          |
-| SO_Down                            | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| SO_Down_In                         | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| SO_Up                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| SO_Up_In                           | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| SO_not_Down                        | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| SO_not_Down_In                     | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| SO_not_Up                          | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
-| SO_not_Up_In                       | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
-| Trig                               | IOB              | OUTPUT    | LVCMOS25             |       | 12       | SLOW |              |          |          |
+| SO_Down                            | IOB              | INPUT     | LVCMOS12             |       |          |      |              |          |          |
+| SO_Down_In                         | IOB              | OUTPUT    | LVCMOS12             |       | 8        | SLOW |              |          |          |
+| SO_Up                              | IOB              | INPUT     | LVCMOS12             |       |          |      |              |          |          |
+| SO_Up_In                           | IOB              | OUTPUT    | LVCMOS12             |       | 8        | SLOW |              |          |          |
+| SO_not_Down                        | IOB              | INPUT     | LVCMOS12             |       |          |      |              |          |          |
+| SO_not_Down_In                     | IOB              | OUTPUT    | LVCMOS12             |       | 8        | SLOW |              |          |          |
+| SO_not_Up                          | IOB              | INPUT     | LVCMOS12             |       |          |      |              |          |          |
+| SO_not_Up_In                       | IOB              | OUTPUT    | LVCMOS12             |       | 8        | SLOW |              |          |          |
+| Trig                               | IOB              | OUTPUT    | LVCMOS12             |       | 8        | SLOW |              |          |          |
 | sysACE_CLK                         | IOB              | INPUT     | LVCMOS33             |       |          |      |              |          |          |
 | sysACE_MPADD<0>                    | IOB              | OUTPUT    | LVDCI_33             |       |          |      |              |          |          |
 | sysACE_MPADD<1>                    | IOB              | OUTPUT    | LVDCI_33             |       |          |      |              |          |          |
@@ -1357,6 +1357,8 @@ Section 6 - IOB Properties
 | sysACE_MPDATA<15>                  | IOB              | BIDIR     | LVDCI_33             |       |          |      |              |          |          |
 | sysACE_MPOE                        | IOB              | OUTPUT    | LVDCI_33             |       |          |      |              |          |          |
 | sysACE_MPWE                        | IOB              | OUTPUT    | LVDCI_33             |       |          |      |              |          |          |
+| test1                              | IOB              | OUTPUT    | LVCMOS12             |       | 8        | SLOW | OFF          |          |          |
+| test2                              | IOB              | INPUT     | LVCMOS25             |       |          |      |              |          |          |
 +---------------------------------------------------------------------------------------------------------------------------------------------------------+
 
 Section 7 - RPMs

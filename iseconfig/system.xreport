@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2013-06-06T19:05:40</DateModified>
+  <DateModified>2013-07-11T14:58:51</DateModified>
   <ModuleName>system</ModuleName>
   <SummaryTimeStamp>2013-05-28T15:02:34</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/praveen/Xilinx work/Dropbox/Rice Internship work/Farinaz - Low power high speed PUFs/PUF testing code/SIRC_HW (Real PUF)/iseconfig/system.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/praveen/Xilinx work/Dropbox/Rice Internship work/Farinaz - Low power high speed PUFs/PUF testing code/SIRC_HW (Real PUF)\</ImplementationReportsDirectory>
+  <SavedFilePath>C:/Users/praveen/Xilinx work/Dropbox/Rice Internship work/Farinaz - Low power high speed PUFs/PUF testing code/SIRC_HW/XUPV5/SIRC_HW (Real PUF)/iseconfig/system.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>C:/Users/praveen/Xilinx work/Dropbox/Rice Internship work/Farinaz - Low power high speed PUFs/PUF testing code/SIRC_HW/XUPV5/SIRC_HW (Real PUF)\</ImplementationReportsDirectory>
   <DateInitialized>2013-05-28T15:04:52</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>
